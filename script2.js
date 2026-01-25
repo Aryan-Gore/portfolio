@@ -160,4 +160,8 @@ function initContactForm() {
             }
         );
     });
+    // =================download cv=================
+    function downloadCV() {
+  window.location.href = "assets/Aryan_Gore_Resume.pdf";
+}
 }
