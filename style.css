@@ -683,6 +683,21 @@ body {
 }
 
 @media (max-width: 640px) {
+
+  .logo{
+    font-size: 15px;
+  }
+
+   .nav-social {
+    gap: 6px;   /* reduce space between icons */
+  }
+
+  .social-icon {
+    width: 34px;   /* slightly smaller icons */
+    height: 34px;
+    padding-right: 10px;
+  }
+
   .about-content,
   .contact-content {
     gap: 30px;
