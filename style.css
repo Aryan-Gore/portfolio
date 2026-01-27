@@ -253,7 +253,7 @@ body {
 .glow-genz-button {
   background: transparent;
   border: 2px solid var(--accent);
-  border-radius: 12px;
+  border-radius: 100px;
   color: var(--accent);
   font-weight: 700;
   font-size: 18px;
@@ -302,7 +302,7 @@ body {
   padding: 12px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 56, 56, 0.2);
+  border: 1px solid #888888;
 }
 
 .social-link:hover {
@@ -492,7 +492,7 @@ body {
 
 .project-card {
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 56, 56, 0.2);
+  border: 1px solid #de515161;
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -501,7 +501,7 @@ body {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(255, 56, 56, 0.2);
+  box-shadow: 0 20px 40px #8888889d;
   border-color: var(--accent);
 }
 
