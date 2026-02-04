@@ -717,4 +717,9 @@ body {
   .social-links {
     justify-content: center;
   }
+
+  .hero-text {
+    margin: 0;
+    width: 100%;
+  }
 } 
