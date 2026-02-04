@@ -204,6 +204,9 @@ body {
 }
 
 .hero-text {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 800px;
   animation: slideInLeft 1s ease-out;
 }
 

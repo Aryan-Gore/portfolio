@@ -55,10 +55,10 @@ function initTypingEffect() {
     const phrases = [
         'Web Developer',
         'Ful-stack Developer', 
-        'Problem Solver',
-        'Code Explorer',
-        'AI Explorer',
-        'Innovator'
+        'AI Enthusiast',
+        'Analytical Thinker',
+        'Tech Explorer',
+        'Frontend Engineer'
     ];
 
     let currentPhraseIndex = 0;
