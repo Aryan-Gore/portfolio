@@ -137,7 +137,6 @@ function initSectionAnimations() {
     elements.forEach(el => observer.observe(el));
 }
 
-
 // -------------------- CONTACT FORM --------------------
 function initContactForm() {
     const form = document.getElementById('contact-form');
