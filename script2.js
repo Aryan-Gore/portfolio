@@ -40,7 +40,7 @@ function initNavbar() {
                 if (activeLink) activeLink.classList.add('active');
             }
         });
-    }, {
+    }, {    
         threshold: 0.3,
         rootMargin: '-100px 0px -100px 0px'
     });
@@ -162,3 +162,14 @@ function initContactForm() {
 
       
 }
+ // Clone tracks so the loop is truly seamless (no jump)
+  (function () {
+    ['marquee-row2'].forEach(function (id) {
+      var track = document.getElementById(id);
+      if (!track) return;
+      var clone = track.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.setAttribute('aria-hidden', 'true');
+      track.parentNode.appendChild(clone);
+    });
+  })();

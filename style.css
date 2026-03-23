@@ -15,6 +15,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                 "Helvetica Neue", Arial, sans-serif;
 }
 
 html {
@@ -495,7 +497,7 @@ body {
 
 .project-card {
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid #de515161;
+  border: 1px solid #88888883;
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -538,12 +540,14 @@ body {
 }
 
 .project-tech span {
-  background: rgba(255, 56, 56, 0.1);
-  color: var(--accent);
+ 
   padding: 4px 12px;
   border-radius: 15px;
   font-size: 0.8rem;
-  border: 1px solid rgba(255, 56, 56, 0.3);
+  border: 1px solid ;
+   background: #3f3f3f2b;
+     color: #cccccccc;
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .project-links {
@@ -723,3 +727,178 @@ body {
     width: 100%;
   }
 } 
+
+.skills-section {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 10px;
+}
+ 
+.skills-header {
+  
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 0 20px;
+}
+ 
+.skills-header h2 {
+  font-size: 3rem;
+  letter-spacing: -0.03em;
+
+  margin-bottom: 12px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ffffff, #aaaaaa, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ 
+.skills-header p {
+  font-size: 1.2rem;
+  color: #eeecec;
+ 
+}
+ 
+.skills-divider {
+  width: 100%;
+  height: 1px;
+}
+ 
+/* Marquee wrapper */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0;
+}
+ 
+/* Fade edges */
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #0a0a0a, transparent);
+}
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #0a0a0a, transparent);
+}
+ 
+/* Marquee track — scrolls RIGHT (reverse direction) */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 14s linear infinite;
+}
+ 
+@keyframes marquee-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+ 
+/* Skill item */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 40px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+ 
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cccccc;
+  flex-shrink: 0;
+}
+ 
+.skill-icon svg {
+  width: 48px;
+  height: 48px;
+}
+ 
+.skill-name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #cccccc;
+}
+/* ---------------------- */
+/* Wrapper */
+.skills-section2 {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+/* Card */
+.skill-card {
+    margin-top: 0px;
+    background: linear-gradient(145deg, #0a0a0a, #111);
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    height: 200px ;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 0 20px rgba(255,255,255,0.03);
+    transition: 0.3s;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+ /* vertical center */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255,255,255,0.08);
+
+   .skill-tags span {
+     background: #3f3f3f00;
+    color: #f7f6f6;
+}
+    
+}
+
+
+
+/* Pills */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-tags span {
+    background: #3f3f3f2b;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #cccccc91;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.skill-tags span:hover {
+    color: #fdfdfd8c;
+}
