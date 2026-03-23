@@ -797,7 +797,7 @@ body {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-right 14s linear infinite;
+  animation: marquee-right 30s linear infinite;
 }
  
 @keyframes marquee-right {
