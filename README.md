@@ -6,7 +6,7 @@ A modern and responsive personal portfolio website built using HTML, CSS, and Ja
 
 ## 🌐 Live Demo
 
-🔗 https://aryan-gore.github.io/porfolio/
+🔗 https://aryan-gore.github.io/portfolio/
 
 ---
 
