@@ -430,9 +430,10 @@ body {
 }
 
 .about-text p {
-  margin-bottom: 20px;
+  margin-top: 20px;
   line-height: 1.8;
   color: var(--muted);
+  text-align: justify;
 }
 
 .skills h3 {
@@ -471,7 +472,7 @@ body {
 
 .code-animation {
   background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 56, 56, 0.3);
+  border: 1px solid #888888e8;
   border-radius: 12px;
   padding: 30px;
   font-family: 'Courier New', monospace;
