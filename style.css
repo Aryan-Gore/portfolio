@@ -633,7 +633,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: rgba(255, 56, 56, 0.3)
+  border-color: #fbfbfbd6
 }
 
 .form-group input::placeholder,
