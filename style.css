@@ -533,6 +533,22 @@ body {
   line-height: 1.6;
 }
 
+.project-content:hover h3 {
+    color: #f7f6f6;
+}
+
+.project-content:hover p {
+ color: #f7f6f6;
+}
+
+.project-content:hover span {
+  color: #f7f6f6;
+}
+.project-content:hover a {
+   color: #f7f6f6;
+}
+
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -684,6 +700,8 @@ body {
   .project-content {
     padding: 20px;
   }
+
+
 
   .contact-form {
     padding: 25px;
