@@ -763,7 +763,7 @@ body {
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, #ffffff, #aaaaaa, #000000);
+    background: linear-gradient(50deg, #ffffff, #aaaaaa, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -838,6 +838,7 @@ body {
   color: #cccccc;
   flex-shrink: 0;
 }
+
  
 .skill-icon svg {
   width: 48px;
