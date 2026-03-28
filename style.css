@@ -537,17 +537,12 @@ body {
     color: #f7f6f6;
 }
 
-.project-content:hover p {
- color: #f7f6f6;
-}
-
 .project-content:hover span {
   color: #f7f6f6;
 }
 .project-content:hover a {
    color: #f7f6f6;
 }
-
 
 .project-tech {
   display: flex;
@@ -573,7 +568,7 @@ body {
 }
 
 .project-link {
-  color: var(--accent);
+  color: #cccccccc;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -768,7 +763,7 @@ body {
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, #ffffff, #aaaaaa, #000000);
+    background: linear-gradient(50deg, #ffffff, #aaaaaa, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -843,6 +838,7 @@ body {
   color: #cccccc;
   flex-shrink: 0;
 }
+
  
 .skill-icon svg {
   width: 48px;
