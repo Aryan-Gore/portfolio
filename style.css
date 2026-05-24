@@ -602,14 +602,16 @@ body {
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-top: 60px;
+  gap: 40px;
+  margin-top: 40px;
+    align-items:start;
 }
 
 .contact-info p {
   color: var(--muted);
-  margin-bottom: 30px;
   line-height: 1.8;
+  margin-bottom: 30px;
+  
 }
 
 .contact-details {
@@ -942,4 +944,13 @@ body {
 
 .skill-tags span:hover {
     color: #fdfdfd8c;
+}
+
+
+.footer{
+    text-align:center;
+    padding:20px;
+    color:#888;
+    font-size:14px;
+    background-color: transparent;
 }
