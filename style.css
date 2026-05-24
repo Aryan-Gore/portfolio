@@ -26,13 +26,26 @@ html {
 body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif;
 
-  background-color: rgba(0, 0, 0, 1);
+  background: linear-gradient(
+    280deg,
+    #000000,
+    #161515,
+    #040404,
+    #090808
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
 
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
 
 .container {
