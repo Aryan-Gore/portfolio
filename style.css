@@ -807,31 +807,28 @@ body {
 }
  
 /* Fade edges */
-.marquee-wrapper::before,
-.marquee-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100px;
-  z-index: 2;
-  pointer-events: none;
-}
-.marquee-wrapper::before {
-  left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0)
-  );
-}
+/* Marquee wrapper */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0;
 
-.marquee-wrapper::after {
-  right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0)
+  /* Transparent fade effect */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
   );
 }
 
