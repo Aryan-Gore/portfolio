@@ -55,10 +55,10 @@ function initTypingEffect() {
     const phrases = [
         'Web Developer',
         'Ful-stack Developer', 
-        'AI Enthusiast',
+        'Data Scientist',
         'Analytical Thinker',
         'Tech Explorer',
-        'Frontend Engineer'
+        'Backend Engineer'
     ];
 
     let currentPhraseIndex = 0;
@@ -146,16 +146,16 @@ function initContactForm() {
         e.preventDefault();
 
         emailjs.sendForm(
-            "service_38qvago",   // ✅ Service ID
-            "template_zm5t0u4",  // ✅ Template ID
+            "service_38qvago",   // Service ID
+            "template_zm5t0u4",  // Template ID
             this
         ).then(
             () => {
-                alert("✅ Message sent successfully!");
+                alert(" Message sent successfully!");
                 form.reset();
             },
             (error) => {
-                alert("❌ Failed to send message: " + error.text);
+                alert("Failed to send message: " + error.text);
             }
         );
     });
