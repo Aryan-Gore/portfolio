@@ -174,4 +174,96 @@ function initContactForm() {
     });
   })();
 
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("Certifications JS Loaded");
+
+    // Fix 1: Changed .certificate-card to .cert-card to match your HTML
+    const images = document.querySelectorAll(".cert-card img");
+
+    images.forEach((img) => {
+        img.addEventListener("click", () => {
+            const overlay = document.createElement("div");
+            overlay.classList.add("certificate-overlay");
+            // Basic styles in case your CSS is missing them
+            overlay.style.position = "fixed";
+            overlay.style.inset = "0";
+            overlay.style.background = "rgba(0,0,0,0.8)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "10000";
+            overlay.style.cursor = "pointer";
+
+            overlay.innerHTML = `
+                <div class="preview-box" style="position: relative; max-width: 90vw; max-height: 90vh;">
+                    <img src="${img.src}" alt="Certificate Preview" style="max-width: 100%; max-height: 90vh; border-radius: 10px;">
+                    <button class="close-preview" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 30px; cursor: pointer;">×</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Close logic for the image preview
+            const closeButton = overlay.querySelector(".close-preview");
+            closeButton.onclick = () => overlay.remove();
+            
+            overlay.onclick = (e) => {
+                if (e.target === overlay) overlay.remove();
+            };
+
+            document.addEventListener("keydown", function closeEsc(e) {
+                if (e.key === "Escape") {
+                    overlay.remove();
+                    document.removeEventListener("keydown", closeEsc);
+                }
+            });
+        });
+    });
+});
+
+// Fix 2: Add the missing function that the buttons are trying to call!
+function openCertificate(imagePath, pdfPath, title, platform) {
+    const viewer = document.getElementById('certViewer');
+    const viewerImg = document.getElementById('viewerImage');
+    const viewerTitle = document.getElementById('viewerTitle');
+    const viewerPlatform = document.getElementById('viewerPlatform');
+    const downloadBtn = document.getElementById('viewerDownloadBtn');
+
+    // Populate the viewer with the passed data
+    viewerImg.src = imagePath;
+    viewerTitle.textContent = title;
+    viewerPlatform.textContent = 'Issued by ' + platform;
+    downloadBtn.href = pdfPath;
+
+    // Show the viewer (matches the .active class in your CSS)
+    viewer.classList.add('active');
+}
+
+// Function to close the main certificate viewer
+function closeCertificate() {
+    const viewer = document.getElementById('certViewer');
+    viewer.classList.remove('active');
+}
+
+// Function to open the "View All" modal
+function openAllCertsModal() {
+    const modal = document.getElementById('allCertsModal');
+    modal.classList.add('active');
+    // Prevent background scrolling while modal is open
+    document.body.style.overflow = 'hidden'; 
+}
+
+// Function to close the "View All" modal
+function closeAllCertsModal() {
+    const modal = document.getElementById('allCertsModal');
+    modal.classList.remove('active');
+    // Restore background scrolling
+    document.body.style.overflow = 'auto'; 
+}
+
+// Close modal if user clicks outside the content box
+document.getElementById('allCertsModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeAllCertsModal();
+    }
+});
