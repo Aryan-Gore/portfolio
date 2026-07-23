@@ -177,7 +177,6 @@ function initContactForm() {
   document.addEventListener("DOMContentLoaded", () => {
     console.log("Certifications JS Loaded");
 
-    // Fix 1: Changed .certificate-card to .cert-card to match your HTML
     const images = document.querySelectorAll(".cert-card img");
 
     images.forEach((img) => {
@@ -221,7 +220,7 @@ function initContactForm() {
     });
 });
 
-// Fix 2: Add the missing function that the buttons are trying to call!
+
 function openCertificate(imagePath, pdfPath, title, platform) {
     const viewer = document.getElementById('certViewer');
     const viewerImg = document.getElementById('viewerImage');
@@ -267,3 +266,4 @@ document.getElementById('allCertsModal').addEventListener('click', function(e) {
         closeAllCertsModal();
     }
 });
+
