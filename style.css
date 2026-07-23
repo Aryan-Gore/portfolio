@@ -1372,6 +1372,9 @@ body {
     border: 1px solid rgba(255,255,255,.08);
     animation: viewerPopup .35s ease;
     z-index: 2;
+    max-height: 90vh;
+    flex-direction: column;
+
 }
 
 .viewer-container img {
@@ -1380,6 +1383,7 @@ body {
     max-height: 75vh;
     object-fit: contain;
     background: #101010;
+    max-height: 55vh;
 }
 
 .viewer-content {
