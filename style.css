@@ -78,25 +78,42 @@ body {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   border-radius: 2px;
 }
-
 #navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgb(255, 255, 255);
-  z-index: 1000;
-  transition: all 0.3s ease;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(1200px, 94%);
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(15, 15, 15, 0.55);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.45),
+        inset 0 1px rgba(255,255,255,.08);
+
+    transition: .35s ease;
+
+    z-index: 9999;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  max-width: 100%;
-  margin: 0 auto;
+
+.nav-container{
+    width:100%;
+    padding:0 28px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo {
@@ -1493,3 +1510,4 @@ body {
     .cert-btn { height: 45px; font-size: .9rem; }
     .cert-tags span { font-size: .7rem; padding: 7px 13px; }
 }
+
