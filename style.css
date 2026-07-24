@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
 
 body {
@@ -369,6 +370,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .nav-menu {
     position: fixed;
     top: 70px;
@@ -410,6 +412,10 @@ body {
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+  }
+
+  #navbar{
+    width: 100%;
   }
 
 
