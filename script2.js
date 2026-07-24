@@ -15,37 +15,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // -------------------- NAVBAR --------------------
 function initNavbar() {
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+    // Mobile menu
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
     });
 
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
         });
     });
 
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                const activeLink = document.querySelector(`a[href="#${entry.target.id}"]`);
-                if (activeLink) activeLink.classList.add('active');
+    // Active navbar on scroll
+    const sections = document.querySelectorAll("section[id]");
+
+    function updateActiveNav() {
+
+        let current = "";
+
+        const scrollY = window.pageYOffset;
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 120;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                scrollY >= sectionTop &&
+                scrollY < sectionTop + sectionHeight
+            ) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
             }
         });
-    }, {    
-        threshold: 0.3,
-        rootMargin: '-100px 0px -100px 0px'
-    });
+    }
 
-    sections.forEach(section => observer.observe(section));
+    window.addEventListener("scroll", updateActiveNav);
+
+    updateActiveNav();
 }
 
 
