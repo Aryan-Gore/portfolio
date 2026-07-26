@@ -9,7 +9,15 @@
   --card-2: #242424;
   --shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
 }
+::selection {
+    background: #ffffffd5;
+    color: #000000;
+}
 
+::-moz-selection {
+    background: #ffffffd5;
+    color: #000000;
+}
 
 * {
   margin: 0;
@@ -993,19 +1001,6 @@ body {
     margin-bottom: 60px; /* Provides breathing room before cards */
 }
 
-.cert-eyebrow {
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 50px;
-    border: 1px solid rgba(255,255,255,.15);
-    background: rgba(255,255,255,.05);
-    color: var(--accent, #007bff);
-    letter-spacing: 3px;
-    font-size: .75rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
 
 .cert-subtitle {
     color: var(--muted, #999);
@@ -1087,6 +1082,7 @@ body {
     mask-composite: exclude;
     opacity: 0;
     transition: .45s;
+    pointer-events: none;
 }
 
 .cert-card:hover::before { opacity: 1; }
@@ -1102,6 +1098,7 @@ body {
     background: linear-gradient(120deg, transparent, rgba(255,255,255,.15), transparent);
     transform: rotate(25deg);
     transition: .8s;
+    pointer-events: none;
 }
 
 .cert-card:hover::after { left: 100%; }
@@ -1205,6 +1202,7 @@ body {
     border: 1px solid rgba(255,255,255,.08);
     transition: .4s;
     cursor: pointer;
+  
 }
 
 .cert-btn:hover {
