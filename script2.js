@@ -1,17 +1,14 @@
 // ================================
 // LOADER
 // ================================
-
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const loader = document.querySelector(".loader");
 
-    if (loader) {
-        loader.style.opacity = "0";
+    loader.style.opacity = "0";
 
-        setTimeout(() => {
-            loader.style.display = "none";
-        },500);
-    }
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
 });
 // -------------------- DOM CONTENT LOADED --------------------
 document.addEventListener('DOMContentLoaded', function() {
