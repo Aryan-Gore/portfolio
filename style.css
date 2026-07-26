@@ -592,9 +592,7 @@ body {
 .project-card:hover span {
   color: #f7f6f6;
 }
-.project-card:hover a {
-   color: #f7f6f6;
-}
+
 
 .project-tech {
   display: flex;
@@ -630,9 +628,9 @@ body {
 }
 
 .project-link:hover {
-  background: var(--accent);
-  color: black;
-}
+  background: #cccccccc;
+  color: #000000;
+} 
 
 .contact-content {
   display: grid;
