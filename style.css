@@ -620,12 +620,14 @@ body {
   margin-top: 40px;
     align-items:start;
 }
-
+.contact-info{
+  padding-top: 10%;
+}
 .contact-info p {
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 30px;
-  
+   
 }
 
 .contact-details {
@@ -683,6 +685,11 @@ body {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--muted);
+}
+
+.social-links{
+  display: flex;
+  gap: 10px;
 }
 
 .slide-in-left {
