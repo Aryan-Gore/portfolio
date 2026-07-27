@@ -1273,7 +1273,7 @@ body {
 .close-modal:hover {
     background: #fff;
     color: #000;
-    transform: rotate(90deg);
+    
 }
 
 .cert-modal-content h2 {
