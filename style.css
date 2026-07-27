@@ -540,10 +540,52 @@ body {
   border-color: var(--accent);
 }
 
-.project-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.project-image{
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #0f0f0f;
+     height:220px;
+}
+
+.project-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.project-image img.loaded{
+    opacity: 1;
+}
+
+/* Skeleton */
+
+.image-skeleton{
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #171717 20%,
+        #2a2a2a 50%,
+        #171717 80%
+    );
+
+    background-size: 250% 100%;
+    animation: shimmer 1.2s linear infinite;
+}
+
+@keyframes shimmer{
+    from{
+        background-position: 200% 0;
+    }
+    to{
+        background-position: -200% 0;
+    }
 }
 
 .project-content {
