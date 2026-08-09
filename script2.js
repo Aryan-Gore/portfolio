@@ -300,3 +300,34 @@ document.getElementById('allCertsModal').addEventListener('click', function(e) {
     }
 });
 
+//hidden projects 
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById('projectsToggleBtn');
+    const projectsGrid = document.querySelector('.projects-grid');
+
+    if (toggleBtn && projectsGrid) {
+        toggleBtn.addEventListener('click', () => {
+            const isCurrentlyExpanded = projectsGrid.classList.contains('expanded');
+
+            if (isCurrentlyExpanded) {
+                // COLLAPSING: play fade-out first, then remove expanded
+                projectsGrid.classList.remove('expanded');
+                projectsGrid.classList.add('closing');
+                toggleBtn.classList.remove('is-open');
+                toggleBtn.querySelector('.btn-text').textContent = 'View All Projects';
+
+                setTimeout(() => {
+                    projectsGrid.classList.remove('closing');
+                }, 400); // matches hideCard animation duration
+
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+
+            } else {
+                // EXPANDING: unchanged
+                projectsGrid.classList.add('expanded');
+                toggleBtn.classList.add('is-open');
+                toggleBtn.querySelector('.btn-text').textContent = 'View Less';
+            }
+        });
+    }
+});

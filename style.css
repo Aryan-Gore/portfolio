@@ -655,6 +655,82 @@ body {
   color: #000000;
 } 
 
+/* Hidden projects — collapsed by default */
+.hidden-project {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.projects-grid.expanded .hidden-project {
+  display: block;
+  animation: revealCard 0.5s ease forwards;
+}
+
+/* NEW: closing animation */
+.projects-grid.closing .hidden-project {
+  display: block;
+  animation: hideCard 0.4s ease forwards;
+}
+
+
+@keyframes revealCard {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hideCard {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(20px); }
+}
+
+/* Button wrapper */
+.projects-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.projects-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: #cccccccc;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.projects-toggle-btn:hover {
+  background: var(--accent);
+  color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px #8888889d;
+}
+
+.projects-toggle-btn .btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.projects-toggle-btn.is-open .btn-arrow {
+  transform: rotate(180deg);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .projects-toggle-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+}
+
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
